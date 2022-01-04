@@ -1,0 +1,41 @@
+procedure bubbleSort(in/out array[] : integer, in n : integer)
+kamus
+	step, i, temp : integer
+algoritma
+	// loop to access each array element
+	for step <- 0 to n do
+		// Loop to compare array element
+		for i <- 0 to n-step do
+			if (array[i] > array[i+1]) then
+				// Swap
+				temp <- array[i]
+				array[i] <- array[i+1]
+				array[i+1] <- temp
+			endif
+		endfor
+	endfor
+endprocedure
+
+procedure selectionSort(in/out array[] integer, in n : integer)
+kamus
+	pass, idx, i : integer
+      temp : integer
+algoritma 
+      // loop for pass needed in sorting
+      for pass <- 1 to n-1 do
+      	idx <- pass - 1
+      	 //loop to compare the element
+         	for i <- pass to n do
+       	     if (array[idx] > array[i]) then
+        	         idx <- i
+        	     endif
+        	     i++
+        	 endfor
+        	 //Swap
+        	 temp <- array[pass-1]
+        	 array[pass-1] <- array[idx]
+        	 array[idx] <- temp
+        	 pass <- pass + 1
+       endfor
+endprocedure
+
